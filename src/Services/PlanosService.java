@@ -7,12 +7,12 @@ import Repositories.AeroviasRepository;
 import Repositories.OcupacoesRepository;
 import Repositories.PlanosRepository;
 
-public class PlanoService {
+public class PlanosService {
     private PlanosRepository _planosRepository;
     private AeroviasRepository _aeroviaRepository;
     private OcupacoesRepository _ocupacaoRepository;
 
-    public PlanoService(PlanosRepository _planosRepository, AeroviasRepository _aeroviaRepository,
+    public PlanosService(PlanosRepository _planosRepository, AeroviasRepository _aeroviaRepository,
             OcupacoesRepository _ocupacaoRepository) {
         this._planosRepository = _planosRepository;
         this._aeroviaRepository = _aeroviaRepository;
