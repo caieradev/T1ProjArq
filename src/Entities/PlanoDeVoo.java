@@ -9,6 +9,15 @@ public class PlanoDeVoo {
     private Integer altitude;
     private Integer horario;
     private Date data;
+    private StatusPlanoEnum status;
+
+    public StatusPlanoEnum getStatus() {
+        return status;
+    }
+
+    public void setStatus(StatusPlanoEnum status) {
+        this.status = status;
+    }
 
     public String getId() {
         return id;

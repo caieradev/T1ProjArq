@@ -3,7 +3,7 @@ package Services;
 import Entities.Aeronave;
 
 public class AeronavesService {
-    public Aeronave createAeronave() throws Exception {
+    public Aeronave createAeronave(String tipo) throws Exception {
         throw new Exception("Not implemented");
     }
 }

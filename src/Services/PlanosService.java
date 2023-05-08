@@ -3,39 +3,35 @@ package Services;
 import java.util.List;
 
 import Entities.PlanoDeVoo;
-import Repositories.AeroviasRepository;
-import Repositories.OcupacoesRepository;
+import Entities.StatusPlanoEnum;
 import Repositories.PlanosRepository;
 
 public class PlanosService {
     private PlanosRepository _planosRepository;
-    private AeroviasRepository _aeroviaRepository;
-    private OcupacoesRepository _ocupacaoRepository;
 
-    public PlanosService(PlanosRepository _planosRepository, AeroviasRepository _aeroviaRepository,
-            OcupacoesRepository _ocupacaoRepository) {
-        this._planosRepository = _planosRepository;
-        this._aeroviaRepository = _aeroviaRepository;
-        this._ocupacaoRepository = _ocupacaoRepository;
+    public PlanosService(PlanosRepository planosRepository) {
+        this._planosRepository = planosRepository;
     }
 
     public PlanoDeVoo getPlano(String planoId) throws Exception {
-        throw new Exception("Not Implemented");
+        return this._planosRepository.getPlano(planoId);
     }
 
-    public void cancelarPlano(String planoId) {
-
+    public void cancelarPlano(String planoId) throws Exception {
+        var plano = this._planosRepository.getPlano(planoId);
+        plano.setStatus(StatusPlanoEnum.CANCELADO);
     }
 
-    public void consistePlano(PlanoDeVoo plano) {
-
+    public boolean consistePlano(PlanoDeVoo plano) throws Exception {
+        return this._planosRepository.addPlano(plano);
     }
 
-    public void aprovaPlano(String planoId) {
-
+    public void aprovarPlano(String planoId) throws Exception {
+        var plano = this._planosRepository.getPlano(planoId);
+        plano.setStatus(StatusPlanoEnum.APROVADO);
     }
 
     public List<PlanoDeVoo> getPlanos() throws Exception {
-        throw new Exception("Not Implemented");
+        return this._planosRepository.getPlanos();
     }
 }

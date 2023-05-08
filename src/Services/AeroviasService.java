@@ -32,7 +32,7 @@ public class AeroviasService {
         return livres;
     }
 
-    public List<Aerovia> getAerovias(String aeroviaId) {
+    public List<Aerovia> getAerovias() {
         return this._aeroviaRepository.getAerovias();
     }
 }
