@@ -6,7 +6,7 @@ import java.util.List;
 
 import Entities.Ocupacao;
 
-public class OcupacoesRepository {
+public class OcupacoesRepository implements IOcupacaoRepository {
     private List<Ocupacao> ocupacoes;
 
     public OcupacoesRepository() {

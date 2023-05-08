@@ -5,7 +5,7 @@ import java.util.List;
 
 import Entities.PlanoDeVoo;
 
-public class PlanosRepository {
+public class PlanosRepository implements IPlanosRepository {
     private List<PlanoDeVoo> planos;
 
     public PlanosRepository() {

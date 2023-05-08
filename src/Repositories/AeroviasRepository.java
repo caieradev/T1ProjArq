@@ -5,7 +5,7 @@ import java.util.List;
 
 import Entities.Aerovia;
 
-public class AeroviasRepository {
+public class AeroviasRepository implements IAeroviasRepository {
     private List<Aerovia> aerovias;
 
     public AeroviasRepository() {

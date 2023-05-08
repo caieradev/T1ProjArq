@@ -4,6 +4,15 @@ public abstract class Aeronave {
     private String aeronaveId;
     private double velocidade;
     private double autonomia;
+    private TipoAeronaveEnum tipoAeronave;
+
+    public TipoAeronaveEnum getTipoAeronave() {
+        return tipoAeronave;
+    }
+
+    public void setTipoAeronave(TipoAeronaveEnum tipoAeronave) {
+        this.tipoAeronave = tipoAeronave;
+    }
 
     public String getAeronaveId() {
         return aeronaveId;
